@@ -86,4 +86,16 @@ public class Nematode {
 	public void setEyes(boolean eyes) {
 		this.eyes = eyes;
 	}
+
+    public void render(NematodeVisualiser pa)
+    {
+        float offset = 40;
+     
+        for(int i = 0; i < this.length; i ++)
+        {
+            pa.fill(0);
+            pa.stroke(255);
+            pa.circle(pa.width/2, (pa.height/2)+(offset*i), 45);
+        }
+    }
 }

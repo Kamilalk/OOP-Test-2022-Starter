@@ -35,6 +35,7 @@ public class NematodeVisualiser extends PApplet
 		colorMode(HSB);
 		background(0);
 		loadNematodes();
+		//drawNematodes(); when draw nodes is not commented the names disappear and it does not itterate through the list
 		printNematodes();
 		smooth();				
 	}
@@ -58,6 +59,13 @@ public class NematodeVisualiser extends PApplet
 		}
 
 	}
+    public void drawNematodes()
+    {
+        for(Nematode n:nematodes)
+        {
+            n.render(this);
+        }
+    }
 
 
 	public void draw()
