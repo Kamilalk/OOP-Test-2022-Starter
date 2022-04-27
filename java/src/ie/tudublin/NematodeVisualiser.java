@@ -10,12 +10,18 @@ public class NematodeVisualiser extends PApplet
 {	
 	ArrayList<Nematode> nematodes = new ArrayList<Nematode>(); 
 
+	int option = 0; 
 
 	public void keyPressed()
 	{		
 		if (keyCode == LEFT)
 		{
-		}		
+			option = option -1;
+		}	
+		if (keyCode == RIGHT)
+		{
+			option = option +1;
+		}	
 	}
 
 
@@ -56,5 +62,12 @@ public class NematodeVisualiser extends PApplet
 
 	public void draw()
 	{	
+		int Size = nematodes.size();
+		int userOption = option % Size;
+		clear();
+		String Name = nematodes.get(userOption).name;
+		textSize(40);
+		text(Name, 400, 50);
+
 	}
 }

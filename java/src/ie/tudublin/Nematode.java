@@ -5,7 +5,7 @@ import processing.data.Table;
 import processing.data.TableRow;
 
 public class Nematode {
-    private String name;
+    public String name;
 	private float length;
 	private boolean limbs;
 	private String gender;
